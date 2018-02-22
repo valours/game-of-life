@@ -7,25 +7,42 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(int argc, char *argv[])
 {
-    int resultat = 0, nombre1 = 0, nombre2 = 0;
+    int choixMenu;
     
-    // On demande les nombres 1 et 2 à l'utilisateur :
+    printf("=== Menu ===\n\n");
+    printf("1. Royal Cheese\n");
+    printf("2. Mc Deluxe\n");
+    printf("3. Mc Bacon\n");
+    printf("4. Big Mac\n");
+    printf("\nVotre choix ? ");
+    scanf("%d", &choixMenu);
     
-    printf("Entrez le nombre 1 : ");
-    scanf("%d", &nombre1);
-    printf("Entrez le nombre 2 : ");
-    scanf("%d", &nombre2);
+    printf("\n");
     
-    // On fait le calcul :
+    switch (choixMenu)
+    {
+        case 1:
+            printf("Vous avez choisi le Royal Cheese. Bon choix !");
+            break;
+        case 2:
+            printf("Vous avez choisi le Mc Deluxe. Berk, trop de sauce...");
+            break;
+        case 3:
+            printf("Vous avez choisi le Mc Bacon. Bon, ca passe encore ca ;o)");
+            break;
+        case 4:
+            printf("Vous avez choisi le Big Mac. Vous devez avoir tres faim !");
+            break;
+        default:
+            printf("Vous n'avez pas rentre un nombre correct. Vous ne mangerez rien du tout !");
+            break;
+    }
     
-    resultat = nombre1 + nombre2;
-    
-    // Et on affiche l'addition à l'écran :
-    
-    printf ("%d + %d = %d\n", nombre1, nombre2, resultat);
+    printf("\n\n");
     
     return 0;
 }
