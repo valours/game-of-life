@@ -1,5 +1,4 @@
 
-damn();
 var scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(80, window.innerWidth / window.innerHeight, 0.1, 1000);
 
@@ -33,9 +32,6 @@ function createCell(sizeMap = 11) {
 var cells = createCell()
 
 cells.forEach(cell => scene.add(cell));
-
-cells.forEach(cell => {
-});
 
 camera.position.z = 20;
 camera.position.y = 5; 
